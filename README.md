@@ -55,7 +55,7 @@ docker run -p 5050:5050 receipt-processor
 ```sh
 curl -X POST "http://localhost:5050/receipts/process" \
      -H "Content-Type: application/json" \
-     -d @receipt.json  # Ensure correct path
+     -d @receipt.json  # Ensure correct path on your local
 ```
 
 - **Response Example**:
@@ -70,7 +70,7 @@ curl -X POST "http://localhost:5050/receipts/process" \
 - **Description**: Retrieves the points awarded for a given receipt ID.
 - **Request Example**:
 ```sh
-curl -X GET "http://localhost:5050/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points"
+curl -X GET "http://localhost:5050/receipts/<receipt_id>/points"
 ```
 
 - **Response Example**:
